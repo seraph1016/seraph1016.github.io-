@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="개인 온라인 이력서 웹사이트 - 경력, 학력, 기술, 포트폴리오를 소개합니다." />
+  <title>개인 이력서</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/sections.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav id="navbar" role="navigation" aria-label="주요 내비게이션">
+      <div class="navbar-inner">
+        <a href="#profile" class="navbar-brand" aria-label="홈으로 이동">이력서</a>
+
+        <!-- Hamburger Menu Button (Mobile) -->
+        <button
+          class="hamburger-menu"
+          id="hamburger-btn"
+          aria-label="메뉴 열기/닫기"
+          aria-expanded="false"
+          aria-controls="nav-links-list"
+        >
+          <span class="hamburger-line" aria-hidden="true"></span>
+          <span class="hamburger-line" aria-hidden="true"></span>
+          <span class="hamburger-line" aria-hidden="true"></span>
+        </button>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links" id="nav-links-list" role="list">
+          <li><a href="#profile" class="nav-link active">프로필</a></li>
+          <li><a href="#experience" class="nav-link">경력</a></li>
+          <li><a href="#education" class="nav-link">학력</a></li>
+          <li><a href="#skills" class="nav-link">기술</a></li>
+          <li><a href="#portfolio" class="nav-link">포트폴리오</a></li>
+          <li><a href="#contact" class="nav-link">연락처</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- Profile Section -->
+    <section id="profile" aria-labelledby="profile-heading">
+      <div class="profile-container">
+        <div class="profile-layout">
+          <!-- Profile Image -->
+          <div class="profile-image-wrapper">
+            <img
+              id="profile-image"
+              src="assets/images/profile.jpg"
+              alt="프로필 사진"
+              class="profile-image"
+              onerror="this.onerror=null; this.style.display='none'; document.getElementById('profile-placeholder').style.display='flex';"
+            />
+            <div
+              id="profile-placeholder"
+              class="profile-image-placeholder"
+              style="display: none;"
+              aria-hidden="true"
+            >
+              👤
+            </div>
+          </div>
+
+          <!-- Profile Info -->
+          <div class="profile-info">
+            <h1 id="profile-heading" class="profile-name">이름</h1>
+            <p class="profile-title">직함 / 직책</p>
+            <p class="profile-tagline">
+              한 줄 소개가 여기에 표시됩니다. 최대 150자까지 작성할 수 있습니다.
+            </p>
+
+            <!-- Social Links -->
+            <div class="profile-social" aria-label="소셜 프로파일 링크">
+              <div class="social-links" id="social-links-container">
+                <!-- Social links will be rendered by renderer.js -->
+                <a
+                  href="#"
+                  class="social-icon"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn 프로파일"
+                >
+                  in
+                </a>
+                <a
+                  href="#"
+                  class="social-icon"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub 프로파일"
+                >
+                  GH
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" aria-labelledby="experience-heading">
+      <div class="experience-container">
+        <h2 id="experience-heading" class="section-title">경력 사항</h2>
+        <div class="section-content">
+          <div class="experience-list" id="experience-list">
+            <!-- Experience items will be rendered by renderer.js -->
+            <p class="empty-state">경력 사항이 없습니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" aria-labelledby="education-heading">
+      <div class="education-container">
+        <h2 id="education-heading" class="section-title">학력 사항</h2>
+        <div class="section-content">
+          <div class="education-list" id="education-list">
+            <!-- Education items will be rendered by renderer.js -->
+            <p class="empty-state">학력 사항이 없습니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" aria-labelledby="skills-heading">
+      <div class="skills-container">
+        <h2 id="skills-heading" class="section-title">기술 스택</h2>
+        <div class="section-content">
+          <div class="skills-grid" id="skills-grid">
+            <!-- Skill categories will be rendered by renderer.js -->
+            <p class="empty-state">기술 정보가 없습니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" aria-labelledby="portfolio-heading">
+      <div class="portfolio-container">
+        <h2 id="portfolio-heading" class="section-title">포트폴리오</h2>
+        <div class="section-content">
+          <div class="portfolio-grid" id="portfolio-grid">
+            <!-- Project cards will be rendered by renderer.js -->
+            <p class="empty-state">프로젝트가 없습니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="contact-container">
+        <h2 id="contact-heading" class="section-title">연락처</h2>
+        <div class="section-content">
+          <div class="contact-grid" id="contact-grid">
+            <!-- Contact info will be rendered by renderer.js -->
+            <div class="contact-info" id="contact-info">
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">✉</div>
+                <div>
+                  <p class="contact-label">이메일</p>
+                  <p class="contact-value">
+                    <a href="mailto:example@email.com">example@email.com</a>
+                  </p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">in</div>
+                <div>
+                  <p class="contact-label">LinkedIn</p>
+                  <p class="contact-value">
+                    <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn 프로파일</a>
+                  </p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">GH</div>
+                <div>
+                  <p class="contact-label">GitHub</p>
+                  <p class="contact-value">
+                    <a href="#" target="_blank" rel="noopener noreferrer">GitHub 프로파일</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Resume Download -->
+            <div class="contact-download" id="contact-download">
+              <h3 class="contact-download-title">이력서 다운로드</h3>
+              <p>PDF 형식의 이력서를 다운로드하실 수 있습니다.</p>
+              <a
+                href="assets/images/resume.pdf"
+                class="btn btn-primary"
+                download="resume.pdf"
+                id="download-resume-btn"
+                aria-label="이력서 PDF 다운로드"
+              >
+                이력서 다운로드 (PDF)
+              </a>
+              <div id="download-error" class="error-message" style="display: none;" role="alert">
+                파일을 찾을 수 없습니다.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <p class="footer-text">
+        &copy; <span id="footer-year"></span> 개인 이력서 웹사이트. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/renderer.js"></script>
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
